@@ -1,0 +1,11 @@
+C:\Users\gazto\source\repos\hwkit\AdlLib\bin\Debug\net8.0\AdlLib.deps.json
+C:\Users\gazto\source\repos\hwkit\AdlLib\bin\Debug\net8.0\AdlLib.dll
+C:\Users\gazto\source\repos\hwkit\AdlLib\bin\Debug\net8.0\AdlLib.pdb
+C:\Users\gazto\source\repos\hwkit\AdlLib\obj\Debug\net8.0\AdlLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gazto\source\repos\hwkit\AdlLib\obj\Debug\net8.0\AdlLib.AssemblyInfoInputs.cache
+C:\Users\gazto\source\repos\hwkit\AdlLib\obj\Debug\net8.0\AdlLib.AssemblyInfo.cs
+C:\Users\gazto\source\repos\hwkit\AdlLib\obj\Debug\net8.0\AdlLib.csproj.CoreCompileInputs.cache
+C:\Users\gazto\source\repos\hwkit\AdlLib\obj\Debug\net8.0\AdlLib.dll
+C:\Users\gazto\source\repos\hwkit\AdlLib\obj\Debug\net8.0\refint\AdlLib.dll
+C:\Users\gazto\source\repos\hwkit\AdlLib\obj\Debug\net8.0\AdlLib.pdb
+C:\Users\gazto\source\repos\hwkit\AdlLib\obj\Debug\net8.0\ref\AdlLib.dll
