@@ -89,7 +89,7 @@ namespace Demo
                                                 List<ADLDisplayInfo> DisplayInfoData = new List<ADLDisplayInfo>();
                                                 for (j = 0; j < NumberOfDisplays; j++)
                                                 {
-                                                    oneDisplayInfo = (ADLDisplayInfo)Marshal.PtrToStructure(new IntPtr(DisplayBuffer.ToInt32() + j * Marshal.SizeOf(oneDisplayInfo)), oneDisplayInfo.GetType());
+                                                    oneDisplayInfo = (ADLDisplayInfo)Marshal.PtrToStructure(new IntPtr(DisplayBuffer.ToInt64() + j * Marshal.SizeOf(oneDisplayInfo)), oneDisplayInfo.GetType());
                                                     DisplayInfoData.Add(oneDisplayInfo);
                                                 }
                                                 Console.WriteLine("\nTotal Number of Displays supported: " + NumberOfDisplays.ToString());
@@ -182,9 +182,17 @@ namespace Demo
                 NvGpu.NvmlShutdown();
                 return true;
             }
+            catch(DllNotFoundException)
+            {
+                return false;
+            }
             catch (SystemException se)
             {
                 Console.WriteLine(se.ToString());
+                NvGpu.NvmlShutdown();
+            }
+            catch
+            {
                 NvGpu.NvmlShutdown();
             }
             return false;

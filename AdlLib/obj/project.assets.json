@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gazto\\source\\repos\\hwkit\\AdlLib\\AdlLib.csproj",
+      "projectUniqueName": "C:\\Users\\gazto\\Source\\Repos\\hwkit\\AdlLib\\AdlLib.csproj",
       "projectName": "AdlLib",
-      "projectPath": "C:\\Users\\gazto\\source\\repos\\hwkit\\AdlLib\\AdlLib.csproj",
+      "projectPath": "C:\\Users\\gazto\\Source\\Repos\\hwkit\\AdlLib\\AdlLib.csproj",
       "packagesPath": "C:\\Users\\gazto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gazto\\source\\repos\\hwkit\\AdlLib\\obj\\",
+      "outputPath": "C:\\Users\\gazto\\Source\\Repos\\hwkit\\AdlLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -73,7 +73,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.309/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

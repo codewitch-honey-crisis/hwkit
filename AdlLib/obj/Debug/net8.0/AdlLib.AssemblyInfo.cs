@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AdlLib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bac083408e6d643be633a2e1f7ca4439f369b1fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+313001f81c7787eae652031038618369e424e7b9")]
 [assembly: System.Reflection.AssemblyProductAttribute("AdlLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AdlLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
