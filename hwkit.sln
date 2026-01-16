@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36811.4 d17.14
+VisualStudioVersion = 17.14.36811.4
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NvmlLib", "NvmlLib\NvmlLib.csproj", "{D7B27AE3-D34B-4843-803D-DFD1293A1955}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{09A1CFF1-2921-4596-98B8-79657B3F33CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdlLib", "AdlLib\AdlLib.csproj", "{20C5530A-E567-4DAF-A2A1-A276B9113F02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWKit", "HWKit\HWKit.csproj", "{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,8 +57,23 @@ Global
 		{20C5530A-E567-4DAF-A2A1-A276B9113F02}.Release|x64.Build.0 = Release|Any CPU
 		{20C5530A-E567-4DAF-A2A1-A276B9113F02}.Release|x86.ActiveCfg = Release|Any CPU
 		{20C5530A-E567-4DAF-A2A1-A276B9113F02}.Release|x86.Build.0 = Release|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Debug|x64.Build.0 = Debug|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Debug|x86.Build.0 = Debug|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Release|x64.ActiveCfg = Release|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Release|x64.Build.0 = Release|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Release|x86.ActiveCfg = Release|Any CPU
+		{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7112FD8-FB60-40CE-876F-74075AE89D61}
 	EndGlobalSection
 EndGlobal

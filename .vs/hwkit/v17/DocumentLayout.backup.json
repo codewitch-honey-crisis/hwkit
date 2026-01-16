@@ -3,8 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\gazto\\source\\repos\\hwkit\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\nvidianvmlgpuprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\nvidianvmlgpuprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\nvidia.nvml\\nvml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\nvidia.nvml\\nvml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7B27AE3-D34B-4843-803D-DFD1293A1955}|NvmlLib\\NvmlLib.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\nvmllib\\nvml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7B27AE3-D34B-4843-803D-DFD1293A1955}|NvmlLib\\NvmlLib.csproj|solutionrelative:nvmllib\\nvml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{09A1CFF1-2921-4596-98B8-79657B3F33CE}|Demo\\Demo.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09A1CFF1-2921-4596-98B8-79657B3F33CE}|Demo\\Demo.csproj|solutionrelative:demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A1CFF1-2921-4596-98B8-79657B3F33CE}|Demo\\Demo.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\demo\\demo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{09A1CFF1-2921-4596-98B8-79657B3F33CE}|Demo\\Demo.csproj|solutionrelative:demo\\demo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\nvidia.nvml\\nvmldeviceutilizationrates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\nvidia.nvml\\nvmldeviceutilizationrates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\wmicpuprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\wmicpuprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\nvidia.nvml\\nvmlvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\nvidia.nvml\\nvmlvalue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\coretempcpuprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\coretempcpuprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\hardwareinfoproviderbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\hardwareinfoproviderbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\ihardwareinfoprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\ihardwareinfoprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\hwkit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\hwkit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\hwkit\\hwkit.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C6EC6F14-7BE2-48A9-86B6-AF7EF4382865}|HWKit\\HWKit.csproj|solutionrelative:hwkit\\hwkit.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A1CFF1-2921-4596-98B8-79657B3F33CE}|Demo\\Demo.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\demo\\demo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{09A1CFF1-2921-4596-98B8-79657B3F33CE}|Demo\\Demo.csproj|solutionrelative:demo\\demo.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20C5530A-E567-4DAF-A2A1-A276B9113F02}|AdlLib\\AdlLib.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\adllib\\adl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,8 +70,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Nvml.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\Nvidia.Nvml\\Nvml.cs",
+              "RelativeDocumentMoniker": "HWKit\\Nvidia.Nvml\\Nvml.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\Nvidia.Nvml\\Nvml.cs",
+              "RelativeToolTip": "HWKit\\Nvidia.Nvml\\Nvml.cs",
+              "ViewState": "AgIAAJEBAAAAAAAAAADwv9sBAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T23:06:13.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\Demo\\Program.cs",
+              "RelativeDocumentMoniker": "Demo\\Program.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\Demo\\Program.cs",
+              "RelativeToolTip": "Demo\\Program.cs",
+              "ViewState": "AgIAAMcBAAAAAAAAAADwvxMCAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T18:57:37.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NvmlDeviceUtilizationRates.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\Nvidia.Nvml\\NvmlDeviceUtilizationRates.cs",
+              "RelativeDocumentMoniker": "HWKit\\Nvidia.Nvml\\NvmlDeviceUtilizationRates.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\Nvidia.Nvml\\NvmlDeviceUtilizationRates.cs",
+              "RelativeToolTip": "HWKit\\Nvidia.Nvml\\NvmlDeviceUtilizationRates.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T18:24:12.467Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{9f99c792-068b-47aa-8023-af37ccf016cc}"
@@ -46,28 +137,156 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ADL.cs",
-              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\AdlLib\\ADL.cs",
-              "RelativeDocumentMoniker": "AdlLib\\ADL.cs",
-              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\AdlLib\\ADL.cs",
-              "RelativeToolTip": "AdlLib\\ADL.cs",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAewBcBAABuAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "NvmlValue.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\Nvidia.Nvml\\NvmlValue.cs",
+              "RelativeDocumentMoniker": "HWKit\\Nvidia.Nvml\\NvmlValue.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\Nvidia.Nvml\\NvmlValue.cs",
+              "RelativeToolTip": "HWKit\\Nvidia.Nvml\\NvmlValue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T21:44:39.54Z",
+              "WhenOpened": "2026-01-16T18:23:17.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Nvml.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\nvmllib\\Nvml.cs",
+              "RelativeDocumentMoniker": "nvmllib\\Nvml.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\nvmllib\\Nvml.cs",
+              "RelativeToolTip": "nvmllib\\Nvml.cs",
+              "ViewState": "AgIAAGABAAAAAAAAAADwv5cBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T18:22:46.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\Demo\\Program.cs",
-              "RelativeDocumentMoniker": "Demo\\Program.cs",
-              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\Demo\\Program.cs*",
-              "RelativeToolTip": "Demo\\Program.cs*",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAtwD4BAACRAAAAAAAAAA==",
+              "Title": "NvidiaNvmlGpuProvider.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\NvidiaNvmlGpuProvider.cs",
+              "RelativeDocumentMoniker": "HWKit\\NvidiaNvmlGpuProvider.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\NvidiaNvmlGpuProvider.cs",
+              "RelativeToolTip": "HWKit\\NvidiaNvmlGpuProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T21:17:17.878Z",
+              "WhenOpened": "2026-01-16T18:21:24.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Demo",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\Demo\\Demo.csproj",
+              "RelativeDocumentMoniker": "Demo\\Demo.csproj",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\Demo\\Demo.csproj",
+              "RelativeToolTip": "Demo\\Demo.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-16T10:05:09.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CoreTempCpuProvider.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\CoreTempCpuProvider.cs",
+              "RelativeDocumentMoniker": "HWKit\\CoreTempCpuProvider.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\CoreTempCpuProvider.cs",
+              "RelativeToolTip": "HWKit\\CoreTempCpuProvider.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAswKYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T08:11:44.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HardwareInfoProviderBase.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\HardwareInfoProviderBase.cs",
+              "RelativeDocumentMoniker": "HWKit\\HardwareInfoProviderBase.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\HardwareInfoProviderBase.cs",
+              "RelativeToolTip": "HWKit\\HardwareInfoProviderBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T06:56:02.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WmiCpuProvider.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\WmiCpuProvider.cs",
+              "RelativeDocumentMoniker": "HWKit\\WmiCpuProvider.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\WmiCpuProvider.cs",
+              "RelativeToolTip": "HWKit\\WmiCpuProvider.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwGwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T06:54:46.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HWKit.csproj",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\HWKit.csproj",
+              "RelativeDocumentMoniker": "HWKit\\HWKit.csproj",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\HWKit.csproj",
+              "RelativeToolTip": "HWKit\\HWKit.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-16T06:45:40.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HWKit",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\HWKit.csproj",
+              "RelativeDocumentMoniker": "HWKit\\HWKit.csproj",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\HWKit.csproj",
+              "RelativeToolTip": "HWKit\\HWKit.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-16T06:45:35.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IHardwareInfoProvider.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\IHardwareInfoProvider.cs",
+              "RelativeDocumentMoniker": "HWKit\\IHardwareInfoProvider.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\IHardwareInfoProvider.cs",
+              "RelativeToolTip": "HWKit\\IHardwareInfoProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T06:45:29.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Demo.csproj",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\Demo\\Demo.csproj",
+              "RelativeDocumentMoniker": "Demo\\Demo.csproj",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\Demo\\Demo.csproj",
+              "RelativeToolTip": "Demo\\Demo.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-16T06:30:09.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ADL.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\AdlLib\\ADL.cs",
+              "RelativeDocumentMoniker": "AdlLib\\ADL.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\AdlLib\\ADL.cs",
+              "RelativeToolTip": "AdlLib\\ADL.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAIBJwFEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T21:44:39.54Z",
               "EditorCaption": ""
             }
           ]

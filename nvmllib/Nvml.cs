@@ -405,6 +405,7 @@ namespace Nvidia.Nvml
 
             return (uint)speed;
         }
+        
         public static NvmlAccountingStats NvmlDeviceGetUtilizationRates(IntPtr device)
         {
             NvmlAccountingStats util;

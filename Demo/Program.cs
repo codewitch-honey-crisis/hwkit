@@ -1,12 +1,15 @@
 ﻿using Ati.Adl;
 
+using HWKit;
 
 using Nvidia.Nvml;
 
 using System;
 using System.Collections.Generic;
+using System.Management;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 namespace Demo
 {
     class Program
@@ -234,7 +237,7 @@ namespace Demo
 
         }
 
-        static bool DoAti()
+        static bool DoAmdGpus()
         {
             int ADLRet = -1;
             int NumberOfAdapters = 0;
@@ -276,8 +279,8 @@ namespace Demo
 
                                 for (int i = 0; i < NumberOfAdapters; i++)
                                 {
-                                    ADLPMLogStartInput logStartInput=default;
-                                    ADLPMLogStartOutput logStartOutput=default;
+                                    ADLPMLogStartInput logStartInput = default;
+                                    ADLPMLogStartOutput logStartOutput = default;
                                     ADLPMLogData logData = default;
                                     uint hDevice = 0;
                                     ADLPMLogSupportInfo support = default;
@@ -307,16 +310,16 @@ namespace Demo
                                             ADLRet = -1;
                                             if (null != ADL.ADL2_Adapter_PMLog_Support_Start)
                                             {
-                                                ADLRet = ADL.ADL2_Adapter_PMLog_Support_Start(IntPtr.Zero,OSAdapterInfoData.ADLAdapterInfo[i].AdapterIndex,  ref logStartInput, out logStartOutput, hDevice);
+                                                ADLRet = ADL.ADL2_Adapter_PMLog_Support_Start(IntPtr.Zero, OSAdapterInfoData.ADLAdapterInfo[i].AdapterIndex, ref logStartInput, out logStartOutput, hDevice);
                                             }
                                             if (ADL.ADL_SUCCESS == ADLRet)
                                             {
                                                 logData = Marshal.PtrToStructure<ADLPMLogData>(logStartOutput.pLoggingAddress);
-                                                
-                                                for(j = 0; j< logData.ulValues.Length;j+=2)
+
+                                                for (j = 0; j < logData.ulValues.Length; j += 2)
                                                 {
                                                     if (logData.ulValues[j] == 0) break;
-                                                    Console.WriteLine("    {0} = {1}",SensorToString(logData.ulValues[j]),logData.ulValues[j+1]);
+                                                    Console.WriteLine("    {0} = {1}", SensorToString(logData.ulValues[j]), logData.ulValues[j + 1]);
                                                 }
 
                                                 ADLRet = -1;
@@ -425,7 +428,7 @@ namespace Demo
             }
             return true;
         }
-        static bool DoNvidia()
+        static bool DoNvidiaGpus()
         {
             Console.WriteLine("Initialiling nvml library..");
             try
@@ -460,7 +463,7 @@ namespace Demo
                 NvGpu.NvmlShutdown();
                 return true;
             }
-            catch(DllNotFoundException)
+            catch (DllNotFoundException)
             {
                 return false;
             }
@@ -475,19 +478,73 @@ namespace Demo
             }
             return false;
         }
+        public static void DoCpus()
+        {
+            var procCls = new ManagementClass("Win32_PerfFormattedData_Counters_ProcessorInformation");
+
+            var procCol = procCls.GetInstances();
+            int i = 0;
+            foreach (var procObj in procCol)
+            {
+                var freq = Convert.ToInt32(procObj["ActualFrequency"]);
+                var tim = procObj["PercentProcessorTime"];
+                Console.WriteLine($"Core {i++} Frequency: {((double)freq) / 1000}Ghz, Load: {tim}%");
+            }
+
+
+        }
         private static string GetStringFromSByteArray(sbyte[] data)
         {
             if (data == null)
                 throw new SystemException("Data can't be null");
-            
+
             byte[] busIdData = Array.ConvertAll(data, (a) => (byte)a);
             return Encoding.Default.GetString(busIdData).Replace("\0", "");
         }
-        static void Main(string[] args)
+
+        static void Main2(string[] args)
         {
-            DoNvidia();
-            DoAti();
+            var procCls = new ManagementClass("Win32_Processor");
+            foreach (var procInst in procCls.GetInstances())
+            {
+                Console.WriteLine(procInst.GetText(TextFormat.Mof));
+            }
+            var perfCls = new ManagementClass("Win32_PerfFormattedData_Counters_ProcessorInformation");
+            foreach (var perfInst in perfCls.GetInstances())
+            {
+                Console.WriteLine(perfInst.GetText(TextFormat.Mof));
+            }
 
         }
+        static void Main(string[] args)
+        {
+            // DoNvidiaGpus();
+            // DoAmdGpus();
+            // DoCpus();
+            
+            var hardware = new Dictionary<string, Func<float>>();
+            var cpuProvider = new CoreTempCpuProvider(); // new WmiCpuProvider(); 
+            cpuProvider.PublishReading += (sender, args) => { hardware[args.Path] = args.Getter; };
+            cpuProvider.RefreshInterval = 1000;
+            cpuProvider.Start();
+
+            var gpuProvider = new NvidiaNvmlGpuProvider();
+            gpuProvider.PublishReading += (sender, args) => { hardware[args.Path] = args.Getter; };
+            gpuProvider.RefreshInterval = 1000;
+            gpuProvider.Start();
+
+            while (!Console.KeyAvailable)
+            {
+                foreach (var kvp in hardware)
+                {
+                    Console.WriteLine($"{kvp.Key} => {kvp.Value()}");
+                }
+                Console.Out.Flush();
+                Thread.Sleep(cpuProvider.RefreshInterval==0?1000:(int)cpuProvider.RefreshInterval);
+                Console.Clear();
+
+            }
+        }
+
     }
 }

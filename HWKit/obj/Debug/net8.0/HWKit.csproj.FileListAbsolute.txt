@@ -1,0 +1,13 @@
+C:\Users\gazto\source\repos\hwkit\HWKit\bin\Debug\net8.0\HWKit.deps.json
+C:\Users\gazto\source\repos\hwkit\HWKit\bin\Debug\net8.0\HWKit.dll
+C:\Users\gazto\source\repos\hwkit\HWKit\bin\Debug\net8.0\HWKit.pdb
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\HWKit.csproj.AssemblyReference.cache
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\HWKit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\HWKit.AssemblyInfoInputs.cache
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\HWKit.AssemblyInfo.cs
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\HWKit.csproj.CoreCompileInputs.cache
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\HWKit.sourcelink.json
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\HWKit.dll
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\refint\HWKit.dll
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\HWKit.pdb
+C:\Users\gazto\source\repos\hwkit\HWKit\obj\Debug\net8.0\ref\HWKit.dll

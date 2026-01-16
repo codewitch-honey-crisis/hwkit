@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "X2CRAi6lzPs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gazto\\source\\repos\\hwkit\\HWKit\\HWKit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gazto\\.nuget\\packages\\system.codedom\\10.0.2\\system.codedom.10.0.2.nupkg.sha512",
+    "C:\\Users\\gazto\\.nuget\\packages\\system.management\\10.0.2\\system.management.10.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
