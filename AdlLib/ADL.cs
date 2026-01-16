@@ -79,11 +79,11 @@ namespace Ati.Adl
     public struct ADLPMLogStartInput
     {
         /// list of sensors defined by ADL_PMLOG_SENSORS
-        [MarshalAs(UnmanagedType.U2, SizeConst = 256)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 256)]
         public ushort[] usSensors;
         /// Sample rate in milliseconds
         public uint ulSampleRate;
-        [MarshalAs(UnmanagedType.U4,SizeConst =15)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst =15)]
         /// Reserved
         public uint[] ulReserved;
     }
@@ -91,17 +91,17 @@ namespace Ati.Adl
     public struct ADLPMLogStartOutput
     {
         public IntPtr pLoggingAddress;
-        [MarshalAs(UnmanagedType.U4, SizeConst = 14)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 14)]
         public uint[] ulReserved;
     };
     [StructLayout(LayoutKind.Sequential)]
     public struct ADLPMLogSupportInfo
     {
         /// list of sensors defined by ADL_PMLOG_SENSORS
-        [MarshalAs(UnmanagedType.U2,SizeConst =256)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst =256)]
         public ushort[] usSensors;
         /// Reserved
-        [MarshalAs(UnmanagedType.I4, SizeConst = 16)]
+        [MarshalAs( UnmanagedType.ByValArray, SizeConst = 16)]
         public int[] ulReserved;
     }
     public struct ADLPMLogData
@@ -113,10 +113,10 @@ namespace Ati.Adl
         /// Timestamp of last update
         public ulong ulLastUpdated;
         /// 2D array of senesor and values
-        [MarshalAs(UnmanagedType.U4,SizeConst=512)]
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst=512)]
         public uint[] ulValues;
         /// Reserved
-        [MarshalAs(UnmanagedType.U4,SizeConst=256)]
+        [MarshalAs( UnmanagedType.ByValArray, SizeConst=256)]
         public uint[] ulReserved;
     }
     
