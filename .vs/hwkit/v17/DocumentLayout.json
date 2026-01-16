@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{09A1CFF1-2921-4596-98B8-79657B3F33CE}|Demo\\Demo.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09A1CFF1-2921-4596-98B8-79657B3F33CE}|Demo\\Demo.csproj|solutionrelative:demo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20C5530A-E567-4DAF-A2A1-A276B9113F02}|AdlLib\\AdlLib.csproj|c:\\users\\gazto\\source\\repos\\hwkit\\adllib\\adl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20C5530A-E567-4DAF-A2A1-A276B9113F02}|AdlLib\\AdlLib.csproj|solutionrelative:adllib\\adl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{9f99c792-068b-47aa-8023-af37ccf016cc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ADL.cs",
+              "DocumentMoniker": "C:\\Users\\gazto\\source\\repos\\hwkit\\AdlLib\\ADL.cs",
+              "RelativeDocumentMoniker": "AdlLib\\ADL.cs",
+              "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\AdlLib\\ADL.cs",
+              "RelativeToolTip": "AdlLib\\ADL.cs",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAewBcBAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-15T21:44:39.54Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,9 +65,9 @@
               "RelativeDocumentMoniker": "Demo\\Program.cs",
               "ToolTip": "C:\\Users\\gazto\\source\\repos\\hwkit\\Demo\\Program.cs*",
               "RelativeToolTip": "Demo\\Program.cs*",
-              "ViewState": "AgIAAMMAAAAAAAAAAAAAANEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADEBAAAAAAAAAAAAwF4BAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T21:03:12.503Z",
+              "WhenOpened": "2026-01-15T21:17:17.878Z",
               "EditorCaption": ""
             }
           ]

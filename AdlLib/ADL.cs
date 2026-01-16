@@ -16,7 +16,10 @@
               
  ********************************************************************************/
 
+using Ati.Adl;
+
 using System.Runtime.InteropServices;
+
 using FARPROC = System.IntPtr;
 using HMODULE = System.IntPtr;
 
@@ -63,6 +66,60 @@ namespace Ati.Adl
     /// <returns>return ADL Error Code</returns>
     public delegate int ADL_Display_DisplayInfo_Get(int adapterIndex, ref int numDisplays, out IntPtr displayInfoArray, int forceDetect);
 
+    public delegate int ADL_Flush_Driver_Data(int flush);
+    
+    public delegate int ADL2_Adapter_Active_Get(IntPtr handle, int something, out int adapterid);
+    public delegate int ADL2_Adapter_PMLog_Support_Get(IntPtr context, int iAdapterIndex, out ADLPMLogSupportInfo pPMLogSupportInfo);
+    public delegate int ADL2_Adapter_PMLog_Support_Start(IntPtr context, int iAdapterIndex, ref ADLPMLogStartInput pPMLogStartInput, out ADLPMLogStartOutput pPMLogStartOutput, uint pDevice);
+    public delegate int ADL2_Adapter_PMLog_Support_Stop(IntPtr context, int iAdapterIndex, uint pDevice);
+    public delegate int ADL2_Device_PMLog_Device_Create(IntPtr context, int iAdapterIndex, out uint pDevice);
+    public delegate int ADL2_Device_PMLog_Device_Destroy(IntPtr context, uint hDevice);
+
+    [StructLayout(LayoutKind.Sequential)]
+    public struct ADLPMLogStartInput
+    {
+        /// list of sensors defined by ADL_PMLOG_SENSORS
+        [MarshalAs(UnmanagedType.U2, SizeConst = 256)]
+        public ushort[] usSensors;
+        /// Sample rate in milliseconds
+        public uint ulSampleRate;
+        [MarshalAs(UnmanagedType.U4,SizeConst =15)]
+        /// Reserved
+        public uint[] ulReserved;
+    }
+    [StructLayout(LayoutKind.Sequential)]
+    public struct ADLPMLogStartOutput
+    {
+        public IntPtr pLoggingAddress;
+        [MarshalAs(UnmanagedType.U4, SizeConst = 14)]
+        public uint[] ulReserved;
+    };
+    [StructLayout(LayoutKind.Sequential)]
+    public struct ADLPMLogSupportInfo
+    {
+        /// list of sensors defined by ADL_PMLOG_SENSORS
+        [MarshalAs(UnmanagedType.U2,SizeConst =256)]
+        public ushort[] usSensors;
+        /// Reserved
+        [MarshalAs(UnmanagedType.I4, SizeConst = 16)]
+        public int[] ulReserved;
+    }
+    public struct ADLPMLogData
+    {
+        /// Structure version
+        public uint ulVersion;
+        /// Current driver sample rate
+        public uint ulActiveSampleRate;
+        /// Timestamp of last update
+        public ulong ulLastUpdated;
+        /// 2D array of senesor and values
+        [MarshalAs(UnmanagedType.U4,SizeConst=512)]
+        public uint[] ulValues;
+        /// Reserved
+        [MarshalAs(UnmanagedType.U4,SizeConst=256)]
+        public uint[] ulReserved;
+    }
+    
     /// <summary> ADLAdapterInfo Structure</summary>
     [StructLayout(LayoutKind.Sequential)]
     public struct ADLAdapterInfo
@@ -182,36 +239,51 @@ namespace Ati.Adl
         private static class ADLImport
         {
             /// <summary> Atiadlxx_FileName </summary>
-            public const string Atiadlxx_FileName = "atiadlxx.dll";
+            internal const string Atiadlxx_FileName = "atiadlxx.dll";
             /// <summary> Kernel32_FileName </summary>
-            public const string Kernel32_FileName = "kernel32.dll";
+            internal const string Kernel32_FileName = "kernel32.dll";
             
             [DllImport(Kernel32_FileName)]
-            public static extern HMODULE GetModuleHandle (string moduleName);
+            internal static extern HMODULE GetModuleHandle (string moduleName);
 
             [DllImport(Atiadlxx_FileName)]
-            public static extern int ADL_Main_Control_Create (ADL_Main_Memory_Alloc callback, int enumConnectedAdapters);
+            internal static extern int ADL_Main_Control_Create (ADL_Main_Memory_Alloc callback, int enumConnectedAdapters);
 
             [DllImport(Atiadlxx_FileName)]
-            public static extern int ADL_Main_Control_Destroy ();
+            internal static extern int ADL_Main_Control_Destroy ();
+            [DllImport(Atiadlxx_FileName)]
+            internal static extern int ADL_Flush_Driver_Data(int flush);
+            
+            [DllImport(Atiadlxx_FileName)]
+            internal static extern int ADL_Main_Control_IsFunctionValid (HMODULE module, string procName);
 
             [DllImport(Atiadlxx_FileName)]
-            public static extern int ADL_Main_Control_IsFunctionValid (HMODULE module, string procName);
+            internal static extern FARPROC ADL_Main_Control_GetProcAddress (HMODULE module, string procName);
 
             [DllImport(Atiadlxx_FileName)]
-            public static extern FARPROC ADL_Main_Control_GetProcAddress (HMODULE module, string procName);
+            internal static extern int ADL_Adapter_NumberOfAdapters_Get (ref int numAdapters);
 
             [DllImport(Atiadlxx_FileName)]
-            public static extern int ADL_Adapter_NumberOfAdapters_Get (ref int numAdapters);
+            internal static extern int ADL_Adapter_AdapterInfo_Get (IntPtr info, int inputSize);
 
             [DllImport(Atiadlxx_FileName)]
-            public static extern int ADL_Adapter_AdapterInfo_Get (IntPtr info, int inputSize);
+            internal static extern int ADL_Adapter_Active_Get(int adapterIndex, ref int status);
 
             [DllImport(Atiadlxx_FileName)]
-            public static extern int ADL_Adapter_Active_Get(int adapterIndex, ref int status);
+            internal static extern int ADL_Display_DisplayInfo_Get(int adapterIndex, ref int numDisplays, out IntPtr displayInfoArray, int forceDetect);
+            [DllImport(Atiadlxx_FileName)]
+            internal static extern int ADL2_Adapter_Active_Get(IntPtr handle, int something, out int adapterid);
 
             [DllImport(Atiadlxx_FileName)]
-            public static extern int ADL_Display_DisplayInfo_Get(int adapterIndex, ref int numDisplays, out IntPtr displayInfoArray, int forceDetect);
+            internal static extern int ADL2_Adapter_PMLog_Support_Get(IntPtr context, int iAdapterIndex, out ADLPMLogSupportInfo pPMLogSupportInfo);
+            [DllImport(Atiadlxx_FileName)]
+            internal static extern int ADL2_Adapter_PMLog_Support_Start(IntPtr context, int iAdapterIndex, ref ADLPMLogStartInput pPMLogStartInput, out ADLPMLogStartOutput pPMLogStartOutput, uint pDevice);
+            [DllImport(Atiadlxx_FileName)]
+            internal static extern int ADL2_Adapter_PMLog_Support_Stop(IntPtr context, int iAdapterIndex, uint pDevice);
+            [DllImport(Atiadlxx_FileName)]
+            internal static extern int ADL2_Device_PMLog_Device_Create(IntPtr context, int iAdapterIndex, out uint pDevice);
+            [DllImport(Atiadlxx_FileName)]
+            internal static extern int ADL2_Device_PMLog_Device_Destroy (IntPtr context, uint hDevice);
         }
 
         /// <summary> ADLCheckLibrary class</summary>
@@ -361,7 +433,24 @@ namespace Ati.Adl
         private static ADL_Main_Control_Destroy ADL_Main_Control_Destroy_ = null;
         /// <summary> check flag to indicate the delegate has been checked</summary>
         private static bool ADL_Main_Control_Destroy_Check = false;
-        
+        public static ADL_Flush_Driver_Data ADL_Flush_Driver_Data
+        {
+            get
+            {
+                if(!ADL_Flush_Driver_Data_Check && null == ADL_Flush_Driver_Data_)
+                {
+                    ADL_Flush_Driver_Data_Check = true;
+                    if(ADLCheckLibrary.IsFunctionValid("ADL_Flush_Driver_Data_Check"))
+                    {
+                        ADL_Flush_Driver_Data_ = ADLImport.ADL_Flush_Driver_Data;
+                    }
+                }
+                return ADL_Flush_Driver_Data_;
+            }
+        }
+        private static ADL_Flush_Driver_Data ADL_Flush_Driver_Data_ = null;
+        private static bool ADL_Flush_Driver_Data_Check = false;
+
         /// <summary> ADL_Adapter_NumberOfAdapters_Get Delegates</summary>
         public static ADL_Adapter_NumberOfAdapters_Get ADL_Adapter_NumberOfAdapters_Get
         {
@@ -441,10 +530,119 @@ namespace Ati.Adl
                 return ADL_Display_DisplayInfo_Get_;
             }
         }
-        /// <summary> Private Delegate</summary>
         private static ADL_Display_DisplayInfo_Get ADL_Display_DisplayInfo_Get_ = null;
         /// <summary> check flag to indicate the delegate has been checked</summary>
         private static bool ADL_Display_DisplayInfo_Get_Check = false;
-        
+
+        public static ADL2_Adapter_Active_Get ADL2_Adapter_Active_Get
+        {
+            get
+            {
+                if (!ADL2_Adapter_Active_Get_Check && null == ADL2_Adapter_Active_Get_)
+                {
+                    ADL2_Adapter_Active_Get_Check = true;
+                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Adapter_Active_Get"))
+                    {
+                        ADL2_Adapter_Active_Get_ = ADLImport.ADL2_Adapter_Active_Get;
+                    }
+                }
+                return ADL2_Adapter_Active_Get_;
+            }
+        }
+        private static ADL2_Adapter_Active_Get ADL2_Adapter_Active_Get_ = null;
+        private static bool ADL2_Adapter_Active_Get_Check = false;
+
+        public static ADL2_Adapter_PMLog_Support_Get ADL2_Adapter_PMLog_Support_Get
+        {
+            get
+            {
+                if (!ADL2_Adapter_PMLog_Support_Get_Check && null == ADL2_Adapter_PMLog_Support_Get_)
+                {
+                    ADL2_Adapter_PMLog_Support_Get_Check = true;
+                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Adapter_PMLog_Support_Get"))
+                    {
+                        ADL2_Adapter_PMLog_Support_Get_ = ADLImport.ADL2_Adapter_PMLog_Support_Get;
+                    }
+                }
+                return ADL2_Adapter_PMLog_Support_Get_;
+            }
+        }
+        private static ADL2_Adapter_PMLog_Support_Get ADL2_Adapter_PMLog_Support_Get_ = null;
+        private static bool ADL2_Adapter_PMLog_Support_Get_Check = false;
+
+        public static ADL2_Adapter_PMLog_Support_Start ADL2_Adapter_PMLog_Support_Start
+        {
+            get
+            {
+                if (!ADL2_Adapter_PMLog_Support_Start_Check && null == ADL2_Adapter_PMLog_Support_Start_)
+                {
+                    ADL2_Adapter_PMLog_Support_Start_Check = true;
+                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Adapter_PMLog_Support_Start"))
+                    {
+                        ADL2_Adapter_PMLog_Support_Start_ = ADLImport.ADL2_Adapter_PMLog_Support_Start;
+                    }
+                }
+                return ADL2_Adapter_PMLog_Support_Start_;
+            }
+        }
+        private static ADL2_Adapter_PMLog_Support_Start ADL2_Adapter_PMLog_Support_Start_ = null;
+        private static bool ADL2_Adapter_PMLog_Support_Start_Check = false;
+
+        public static ADL2_Adapter_PMLog_Support_Stop ADL2_Adapter_PMLog_Support_Stop
+        {
+            get
+            {
+                if (!ADL2_Adapter_PMLog_Support_Stop_Check && null == ADL2_Adapter_PMLog_Support_Stop_)
+                {
+                    ADL2_Adapter_PMLog_Support_Stop_Check = true;
+                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Adapter_PMLog_Support_Stop"))
+                    {
+                        ADL2_Adapter_PMLog_Support_Stop_ = ADLImport.ADL2_Adapter_PMLog_Support_Stop;
+                    }
+                }
+                return ADL2_Adapter_PMLog_Support_Stop_;
+            }
+        }
+        private static ADL2_Adapter_PMLog_Support_Stop ADL2_Adapter_PMLog_Support_Stop_ = null;
+        private static bool ADL2_Adapter_PMLog_Support_Stop_Check = false;
+
+        public static ADL2_Device_PMLog_Device_Create ADL2_Device_PMLog_Device_Create
+        {
+            get
+            {
+                if (!ADL2_Device_PMLog_Device_Create_Check && null == ADL2_Device_PMLog_Device_Create_)
+                {
+                    ADL2_Device_PMLog_Device_Create_Check = true;
+                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Device_PMLog_Device_Create"))
+                    {
+                        ADL2_Device_PMLog_Device_Create_ = ADLImport.ADL2_Device_PMLog_Device_Create;
+                    }
+                }
+                return ADL2_Device_PMLog_Device_Create_;
+            }
+        }
+
+        private static ADL2_Device_PMLog_Device_Create ADL2_Device_PMLog_Device_Create_ = null;
+        private static bool ADL2_Device_PMLog_Device_Create_Check = false;
+
+        public static ADL2_Device_PMLog_Device_Destroy ADL2_Device_PMLog_Device_Destroy
+        {
+            get
+            {
+                if (!ADL2_Device_PMLog_Device_Destroy_Check && null == ADL2_Device_PMLog_Device_Destroy_)
+                {
+                    ADL2_Device_PMLog_Device_Destroy_Check = true;
+                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Device_PMLog_Device_Destroy"))
+                    {
+                        ADL2_Device_PMLog_Device_Destroy_ = ADLImport.ADL2_Device_PMLog_Device_Destroy;
+                    }
+                }
+                return ADL2_Device_PMLog_Device_Destroy_;
+            }
+        }
+
+        private static ADL2_Device_PMLog_Device_Destroy ADL2_Device_PMLog_Device_Destroy_ = null;
+        private static bool ADL2_Device_PMLog_Device_Destroy_Check = false;
+
     }
 }
