@@ -357,9 +357,9 @@ namespace Ati.Adl
             [DllImport(Atiadlxx_FileName)]
             internal static extern int ADL2_Adapter_PMLog_Support_Get(IntPtr context, int iAdapterIndex, out ADLPMLogSupportInfo pPMLogSupportInfo);
             [DllImport(Atiadlxx_FileName)]
-            internal static extern int ADL2_Adapter_PMLog_Support_Start(IntPtr context, int iAdapterIndex, ref ADLPMLogStartInput pPMLogStartInput, out ADLPMLogStartOutput pPMLogStartOutput, uint pDevice);
+            internal static extern int ADL2_Adapter_PMLog_Start(IntPtr context, int iAdapterIndex, ref ADLPMLogStartInput pPMLogStartInput, out ADLPMLogStartOutput pPMLogStartOutput, uint pDevice);
             [DllImport(Atiadlxx_FileName)]
-            internal static extern int ADL2_Adapter_PMLog_Support_Stop(IntPtr context, int iAdapterIndex, uint pDevice);
+            internal static extern int ADL2_Adapter_PMLog_Stop(IntPtr context, int iAdapterIndex, uint pDevice);
             [DllImport(Atiadlxx_FileName)]
             internal static extern int ADL2_Device_PMLog_Device_Create(IntPtr context, int iAdapterIndex, out uint pDevice);
             [DllImport(Atiadlxx_FileName)]
@@ -650,41 +650,41 @@ namespace Ati.Adl
         private static ADL2_Adapter_PMLog_Support_Get ADL2_Adapter_PMLog_Support_Get_ = null;
         private static bool ADL2_Adapter_PMLog_Support_Get_Check = false;
 
-        public static ADL2_Adapter_PMLog_Support_Start ADL2_Adapter_PMLog_Support_Start
+        public static ADL2_Adapter_PMLog_Support_Start ADL2_Adapter_PMLog_Start
         {
             get
             {
-                if (!ADL2_Adapter_PMLog_Support_Start_Check && null == ADL2_Adapter_PMLog_Support_Start_)
+                if (!ADL2_Adapter_PMLog_Start_Check && null == ADL2_Adapter_PMLog_Start_)
                 {
-                    ADL2_Adapter_PMLog_Support_Start_Check = true;
-                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Adapter_PMLog_Support_Start"))
+                    ADL2_Adapter_PMLog_Start_Check = true;
+                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Adapter_PMLog_Start"))
                     {
-                        ADL2_Adapter_PMLog_Support_Start_ = ADLImport.ADL2_Adapter_PMLog_Support_Start;
+                        ADL2_Adapter_PMLog_Start_ = ADLImport.ADL2_Adapter_PMLog_Start;
                     }
                 }
-                return ADL2_Adapter_PMLog_Support_Start_;
+                return ADL2_Adapter_PMLog_Start_;
             }
         }
-        private static ADL2_Adapter_PMLog_Support_Start ADL2_Adapter_PMLog_Support_Start_ = null;
-        private static bool ADL2_Adapter_PMLog_Support_Start_Check = false;
+        private static ADL2_Adapter_PMLog_Support_Start ADL2_Adapter_PMLog_Start_ = null;
+        private static bool ADL2_Adapter_PMLog_Start_Check = false;
 
-        public static ADL2_Adapter_PMLog_Support_Stop ADL2_Adapter_PMLog_Support_Stop
+        public static ADL2_Adapter_PMLog_Support_Stop ADL2_Adapter_PMLog_Stop
         {
             get
             {
-                if (!ADL2_Adapter_PMLog_Support_Stop_Check && null == ADL2_Adapter_PMLog_Support_Stop_)
+                if (!ADL2_Adapter_PMLog_Stop_Check && null == ADL2_Adapter_PMLog_Stop_)
                 {
-                    ADL2_Adapter_PMLog_Support_Stop_Check = true;
-                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Adapter_PMLog_Support_Stop"))
+                    ADL2_Adapter_PMLog_Stop_Check = true;
+                    if (ADLCheckLibrary.IsFunctionValid("ADL2_Adapter_PMLog_Stop"))
                     {
-                        ADL2_Adapter_PMLog_Support_Stop_ = ADLImport.ADL2_Adapter_PMLog_Support_Stop;
+                        ADL2_Adapter_PMLog_Stop_ = ADLImport.ADL2_Adapter_PMLog_Stop;
                     }
                 }
-                return ADL2_Adapter_PMLog_Support_Stop_;
+                return ADL2_Adapter_PMLog_Stop_;
             }
         }
-        private static ADL2_Adapter_PMLog_Support_Stop ADL2_Adapter_PMLog_Support_Stop_ = null;
-        private static bool ADL2_Adapter_PMLog_Support_Stop_Check = false;
+        private static ADL2_Adapter_PMLog_Support_Stop ADL2_Adapter_PMLog_Stop_ = null;
+        private static bool ADL2_Adapter_PMLog_Stop_Check = false;
 
         public static ADL2_Device_PMLog_Device_Create ADL2_Device_PMLog_Device_Create
         {

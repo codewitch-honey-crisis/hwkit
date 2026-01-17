@@ -243,6 +243,7 @@ namespace HWKit
                                 for (int i = 0; i < NumberOfAdapters; i++)
                                 {
                                     ADLPMLogStartInput logStartInput = default;
+                                    logStartInput.usSensors = new ushort[256];
                                     ADLPMLogStartOutput logStartOutput = default;
                                     ADLPMLogData logData = default;
                                     uint hDevice = 0;
@@ -272,9 +273,9 @@ namespace HWKit
                                             logStartInput.usSensors[j] = 0;
                                             logStartInput.ulSampleRate = 100;
                                             ADLRet = -1;
-                                            if (null != ADL.ADL2_Adapter_PMLog_Support_Start)
+                                            if (null != ADL.ADL2_Adapter_PMLog_Start)
                                             {
-                                                ADLRet = ADL.ADL2_Adapter_PMLog_Support_Start(IntPtr.Zero, OSAdapterInfoData.ADLAdapterInfo[i].AdapterIndex, ref logStartInput, out logStartOutput, hDevice);
+                                                ADLRet = ADL.ADL2_Adapter_PMLog_Start(IntPtr.Zero, OSAdapterInfoData.ADLAdapterInfo[i].AdapterIndex, ref logStartInput, out logStartOutput, hDevice);
                                             }
                                             if(ADL.ADL_SUCCESS != ADLRet)
                                             {
@@ -329,9 +330,9 @@ namespace HWKit
             for(var i = 0;i<_devices.Count;++i)
             {
                 var t = _devices[i];
-                if (null != ADL.ADL2_Adapter_PMLog_Support_Stop)
+                if (null != ADL.ADL2_Adapter_PMLog_Stop)
                 {
-                    ADL.ADL2_Adapter_PMLog_Support_Stop(IntPtr.Zero, t.Item1, t.Item2);
+                    ADL.ADL2_Adapter_PMLog_Stop(IntPtr.Zero, t.Item1, t.Item2);
                 }
                 if (null != ADL.ADL2_Device_PMLog_Device_Destroy)
                 {

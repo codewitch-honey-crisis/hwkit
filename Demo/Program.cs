@@ -42,11 +42,11 @@ namespace Demo
             var amdGpuProvider = new AmdAdlGpuProvider();
             amdGpuProvider.PublishReading += (sender, args) => { hardware[args.Path] = args.Getter; };
             amdGpuProvider.RefreshInterval = 1000;
-            try
-            {
+            //try
+            //{
                 amdGpuProvider.Start();
-            }
-            catch { }
+            //}
+            //catch { }
 
             while (!Console.KeyAvailable)
             {
