@@ -5,7 +5,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdlLib\AdlLib.csproj" />
     <ProjectReference Include="..\HWKit\HWKit.csproj" />
   </ItemGroup>
 

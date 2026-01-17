@@ -154,6 +154,7 @@ namespace Nvidia.Nvml
         internal static extern NvmlReturn NvmlDeviceSetComputeMode(IntPtr device, NvmlComputeMode mode);
         [DllImport(NVML_SHARED_LIBRARY_STRING, CharSet = CharSet.Ansi, EntryPoint = "nvmlDeviceGetUtilizationRates")]
         internal static extern NvmlReturn NvmlDeviceGetUtilizationRates(IntPtr device, out NvmlAccountingStats utilization);
+        
     }
 
     public class NvGpu
@@ -436,45 +437,7 @@ namespace Nvidia.Nvml
 
             return (uint)speed;
         }
-        public static int NvmlDeviceGetFanSpeedRpm(IntPtr device, int index)
-        {
-            NvmlReturn res;
-            uint speed;
-            NvmlFanSpeedInfo info= default;
-            info.version = 2;
-            info.fan = (uint)index;
-            res = Api.NvmlDeviceGetFanSpeedRpm(device, ref info);
-            if (NvmlReturn.NVML_ERROR_INVALID_ARGUMENT== res)
-            {
-                return -1;
-            }
-            if (NvmlReturn.NVML_SUCCESS != res)
-            {
-                throw new SystemException(res.ToString());
-            }
-
-            return (int)info.speed;
-        }
-        public static int NvmlGetFanCount(IntPtr device)
-        {
-            NvmlReturn res;
-            uint speed;
-            NvmlFanSpeedInfo info = default;
-            info.version = 2;
-            for(int i = 0;i<256;++i)
-            {
-                info.fan = (uint)i;
-                res = Api.NvmlDeviceGetFanSpeedRpm(device, ref info);
-                if (NvmlReturn.NVML_ERROR_INVALID_ARGUMENT == res)
-                {
-                    return i;
-                } else if(NvmlReturn.NVML_SUCCESS!=res)
-                {
-                    throw new SystemException(res.ToString());
-                }
-            }
-            return 256;
-        }
+      
         public static NvmlAccountingStats NvmlDeviceGetUtilizationRates(IntPtr device)
         {
             NvmlAccountingStats util;
