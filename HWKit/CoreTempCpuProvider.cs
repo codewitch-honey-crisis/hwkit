@@ -157,7 +157,7 @@ namespace HWKit
                 var data = Marshal.PtrToStructure<CoreTempSharedDataEx>(_sharedPtr);
                 return data.fCPUSpeed;
             }));
-            Publish($"/cpu/bus/frequency", new Func<float>(() => {
+            Publish($"/bus/frequency", new Func<float>(() => {
                 var data = Marshal.PtrToStructure<CoreTempSharedDataEx>(_sharedPtr);
                 return data.fFSBSpeed;
             }));

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HWKit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04556ae3d8bf8083bbc4f374c4c66adbc1a6c57d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0c5783b5de9484b3a876f1cc3ea14d8b591e6c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("HWKit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HWKit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -21,12 +21,22 @@ namespace Demo
             // DoCpus();
             
             var hardware = new Dictionary<string, Func<float>>();
-            var cpuProvider = new CoreTempCpuProvider(); // new WmiCpuProvider(); 
-            cpuProvider.PublishReading += (sender, args) => { hardware[args.Path] = args.Getter; };
-            cpuProvider.RefreshInterval = 1000;
+
+            var wmiCpuProvider = new WmiCpuProvider();
+            wmiCpuProvider.PublishReading += (sender, args) => { hardware[args.Path] = args.Getter; };
+            wmiCpuProvider.RefreshInterval = 1000;
             try
             {
-                cpuProvider.Start();
+                wmiCpuProvider.Start();
+            }
+            catch { }
+
+            var coreTempCpuProvider = new CoreTempCpuProvider(); 
+            coreTempCpuProvider.PublishReading += (sender, args) => { hardware[args.Path] = args.Getter; };
+            coreTempCpuProvider.RefreshInterval = 1000;
+            try
+            {
+                coreTempCpuProvider.Start();
             }
             catch { }
 
@@ -42,11 +52,11 @@ namespace Demo
             var amdGpuProvider = new AmdAdlGpuProvider();
             amdGpuProvider.PublishReading += (sender, args) => { hardware[args.Path] = args.Getter; };
             amdGpuProvider.RefreshInterval = 1000;
-            //try
-            //{
+            try
+            {
                 amdGpuProvider.Start();
-            //}
-            //catch { }
+            }
+            catch { }
 
             while (!Console.KeyAvailable)
             {
@@ -55,7 +65,7 @@ namespace Demo
                     Console.WriteLine($"{kvp.Key} => {kvp.Value()}");
                 }
                 Console.Out.Flush();
-                Thread.Sleep(cpuProvider.RefreshInterval==0?1000:(int)cpuProvider.RefreshInterval);
+                Thread.Sleep(coreTempCpuProvider.RefreshInterval==0?1000:(int)coreTempCpuProvider.RefreshInterval);
                 Console.Clear();
 
             }

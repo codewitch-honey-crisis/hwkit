@@ -58,14 +58,6 @@ namespace HWKit
                     return data.ulValues[(int)ADL_PMLOG_SENSORS.ADL_PMLOG_INFO_ACTIVITY_GFX];
                 }
             }
-            public float BusClock
-            {
-                get
-                {
-                    var data = GetData();
-                    return data.ulValues[(int)ADL_PMLOG_SENSORS.ADL_PMLOG_BUS_SPEED];
-                }
-            }
             public float RamLoad
             {
                 get
@@ -193,9 +185,7 @@ namespace HWKit
                     case ADL_PMLOG_SENSORS.ADL_PMLOG_CLK_CPUCLK:
                         Publish($"/cpu/{index}/clock", () => accessor.CpuClock);
                         break;
-                    case ADL_PMLOG_SENSORS.ADL_PMLOG_BUS_SPEED:
-                        Publish($"/bus/clock", () => accessor.BusClock);
-                        break;
+                
                 }
                 ++i;
             }
